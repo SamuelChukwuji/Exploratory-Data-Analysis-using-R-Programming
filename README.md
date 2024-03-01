@@ -3,9 +3,9 @@
 
 
 ### Project Overview
-This project looks at the type of movies getting good ratings and high gross amount.
+This project looks at the types of films getting good ratings and high gross amount.
 
-### Data Sources
+### Data Source
 The dataset used for this analysis is "imdb_top_1000.csv" containing information about:
 - Poster_Link - Link of the poster that imdb using
 - Series_Title - Name of the movie
@@ -36,15 +36,14 @@ ggplot2, tidyverse and scales
 - Data Cleansing & Coercions
 - Missing value check 
 
-### Exploratory Data Analysis and Visualization
+### Exploratory Data Analysis
 This involves exploring the dataset to answer key questions like:
 - Which movies have the highest gross?
 - which movies have the highest ratings?
 - Which factors actually contribute to high gross and ratings?
 
-### Data Analysis
+### Data Analysis and Visualization
 
-#### Top 5 Gross
 ```ggplot(top5_gross,aes(x=Gross,y=reorder(Series_Title,Gross))) +
   geom_col(aes(fill=Gross),show.legend = T) +
   labs(title = "Top 5 Movies based on Gross Revenue",x="Gross Revenue",y= NULL)+
@@ -52,9 +51,9 @@ This involves exploring the dataset to answer key questions like:
   scale_fill_gradient(low = "red",high = "black")+
   theme_minimal()
 ```
-[*top 5 gross*]
 
-Top 5 Ratings
+<img width="431" alt="top 5 on gross rev" src="https://github.com/SamuelChukwuji/Exploratory-Data-Analysis-using-R-Programming/assets/159860622/afbd8572-15ca-4378-a7a1-b253c1183da4">
+
 ```
 ggplot(top5_rating,aes(x=IMDB_Rating,y=reorder(Series_Title,IMDB_Rating))) +
   geom_col(aes(fill=IMDB_Rating),show.legend = T) +
@@ -63,18 +62,18 @@ ggplot(top5_rating,aes(x=IMDB_Rating,y=reorder(Series_Title,IMDB_Rating))) +
   scale_fill_gradient(low = "red",high = "black")+
   theme_minimal()
 ```
-[*top 5 ratings*]
 
-Top 5 Gross & Ratings
-```
-ggplot(imdb_top5,aes(x=Gross,y=reorder(Series_Title,Gross))) +
+<img width="431" alt="top 5 on rating" src="https://github.com/SamuelChukwuji/Exploratory-Data-Analysis-using-R-Programming/assets/159860622/2f2ff688-097f-4170-b598-57da0a930c8f">
+
+```ggplot(imdb_top5,aes(x=Gross,y=reorder(Series_Title,Gross))) +
   geom_col(aes(fill=Gross),show.legend = T) +
   labs(title = "Top 5 Movies based on Rating & Gross",x="Gross Revenue",y= NULL)+
   geom_label(aes(label= comma(Gross)),hjust=1.1)+
   scale_fill_gradient(low = "red",high = "black")+
   theme_minimal()
 ```
-[*top 5 gross & ratings*]
+
+<img width="450" alt="Top 5 on rating n gross" src="https://github.com/SamuelChukwuji/Exploratory-Data-Analysis-using-R-Programming/assets/159860622/b702544e-b84f-406a-907f-7e95e69d4534">
 
 From the visualization we will find out about the following:
 - The top 5 High Gross Movies have an average gross of $778,736,742, with an average rating of 8.06
