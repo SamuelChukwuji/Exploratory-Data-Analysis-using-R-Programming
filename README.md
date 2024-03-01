@@ -1,9 +1,19 @@
 
 # Exploratory Data Analysis using R Programming
 
+## Table of Content
+- [Project Overview](#project-overview)
+- [Data Source](#data-source)
+- [Tools](#tools)
+- [Libraries](#libraries)
+- [Data Preparation](#data-preparation)
+- [Exploratory Data Analysis](#exploratory-data-analysis)
+- [Data Analysis and Visualization](#data-analysis-and-visualization)
+- [Conclusion and Recommendations](#conclusion-and-recommendations)
+- [Reference](#reference)
 
 ### Project Overview
-This project looks at the types of films getting good ratings and high gross amount.
+This project gives an understanding of the IMDB top 1000 movies.
 
 ### Data Source
 The dataset used for this analysis is "imdb_top_1000.csv" containing information about:
